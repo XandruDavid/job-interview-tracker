@@ -1,7 +1,7 @@
 import React from "react";
 import { Interview } from "../../models/Interview";
 import { useWorkspaceStore } from "../../store/store";
-import { InterviewField } from "./InterviewField";
+import { InterviewField } from "./InterviewsListField";
 
 type InterviewLineProps = {
     interview: Interview;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useWorkspaceStore } from "../../store/store";
-import { InterviewLine } from "./InterviewLine";
+import { InterviewLine } from "./InterviewsListLine";
 
 export const InterviewsList = () => {
     const [workspaceName, interviews] = useWorkspaceStore((state) => [state.workspace.name, state.workspace.interviews]);
