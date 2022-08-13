@@ -3,6 +3,7 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 import { Company } from "../models/Company";
 import { Interview } from "../models/Interview";
+import { Job } from "../models/Job";
 
 import { Workspace } from "../models/Workspace";
 
@@ -18,12 +19,19 @@ const getNewInterview: () => Interview = () => ({
     id: uuidv4(),
     status: "Contacted",
     company: getNewCompany(),
+    job: getNewJob(),
 });
 
 const getNewCompany: () => Company = () => ({
     name: "",
-    size: null,
-})
+    size: "201-500",
+});
+
+const getNewJob: () => Job = () => ({
+    role: "Backend",
+    city: "Munich",
+    stack: "Java Spring"
+});
 
 type WorkspaceState = {
     workspace: Workspace;
