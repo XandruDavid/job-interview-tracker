@@ -6,17 +6,17 @@ export const InterviewsList = () => {
     const [createNewInterview, deleteInterview] = useWorkspaceStore((state) => [state.createNewInterview, state.deleteInterview]);
 
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline">
+        <div className="p-14">
+            <h1 className="mb-12 text-3xl text-slate-900 font-extrabold">
                 {workspaceName}
             </h1>
             {interviews.map((interview) => (
-                <div key={interview.id}>
+                <div key={interview.id} className="my-1 rounded-md p-3 shadow-light-xl bg-white text-slate-700">
                     {interview.id}
                     <button onClick={() => deleteInterview(interview.id)}>-</button>
                 </div>
             ))}
-            <button onClick={createNewInterview}>Create</button>
+            <button onClick={createNewInterview}>Add</button>
         </div>
     );
 };
