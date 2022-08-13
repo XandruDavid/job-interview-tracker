@@ -20,6 +20,7 @@ const getNewInterview: () => Interview = () => ({
 type WorkspaceState = {
     workspace: Workspace;
     createNewInterview: () => void;
+    deleteInterview: (id: string) => void;
 };
 
 export const useWorkspaceStore = create<WorkspaceState>()(
@@ -27,6 +28,7 @@ export const useWorkspaceStore = create<WorkspaceState>()(
         (set) => ({
             workspace: getNewWorkspace(),
             createNewInterview: () => set((state) => ({ workspace: { ...state.workspace, interviews: state.workspace.interviews.concat(getNewInterview()) } })),
+            deleteInterview: (id) => set((state) => ({ workspace: { ...state.workspace, interviews: state.workspace.interviews.filter((interview) => interview.id != id) } })),
         }),
         { name: LOCAL_STOREAGE_KEY },
     ),
