@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import create from "zustand";
 import { persist } from "zustand/middleware";
+import { Company } from "../models/Company";
 import { Interview } from "../models/Interview";
 
 import { Workspace } from "../models/Workspace";
@@ -15,7 +16,14 @@ const getNewWorkspace: () => Workspace = () => ({
 
 const getNewInterview: () => Interview = () => ({
     id: uuidv4(),
+    status: "Contacted",
+    company: getNewCompany(),
 });
+
+const getNewCompany: () => Company = () => ({
+    name: "",
+    size: null,
+})
 
 type WorkspaceState = {
     workspace: Workspace;
