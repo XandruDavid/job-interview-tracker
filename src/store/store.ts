@@ -30,7 +30,8 @@ const getNewCompany: () => Company = () => ({
 const getNewJob: () => Job = () => ({
     role: "Backend",
     city: "Munich",
-    stack: "Java Spring"
+    stack: "Java Spring",
+    salary: "65k-85k",
 });
 
 type WorkspaceState = {
