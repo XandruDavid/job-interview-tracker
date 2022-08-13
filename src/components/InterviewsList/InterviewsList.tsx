@@ -1,5 +1,6 @@
 import React from "react";
 import { useWorkspaceStore } from "../../store/store";
+import { InterviewsListHeader } from "./InterviewsListHeader";
 import { InterviewLine } from "./InterviewsListLine";
 
 export const InterviewsList = () => {
@@ -9,6 +10,7 @@ export const InterviewsList = () => {
     return (
         <div className="p-14">
             <h1 className="mb-12 text-3xl text-slate-900 font-extrabold">{workspaceName}</h1>
+            <InterviewsListHeader />
             {interviews.map((interview) => (
                 <InterviewLine key={interview.id} interview={interview} />
             ))}

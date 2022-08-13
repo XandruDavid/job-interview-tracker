@@ -12,8 +12,9 @@ export const InterviewLine = ({ interview }: InterviewLineProps) => {
 
     return (
         <div key={interview.id} className="my-1 rounded-md p-3 shadow-light-xl bg-white text-slate-700">
-            <InterviewField label="" value={interview.status} />
-            <InterviewField label="Company" value={interview.company.name} />
+            <InterviewField label="" value={interview.status} className="w-28"/>
+            <InterviewField label="Name" value={interview.company.name} className="w-72" />
+            <InterviewField label="Size" value={interview.company.size} className="w-24" />
             <button onClick={() => deleteInterview(interview.id)}>-</button>
         </div>
     );
