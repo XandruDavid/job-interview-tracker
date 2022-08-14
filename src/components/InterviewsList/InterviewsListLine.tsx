@@ -23,7 +23,7 @@ export const InterviewLine = ({ interview }: InterviewLineProps) => {
     const density = usePreferencesStore((state) => state.prefernces.density);
 
     return (
-        <div key={interview.id} className={`flex items-center ${densitySpaces[density]} px-3 rounded-md shadow-light-xl bg-white text-slate-700`}>
+        <div key={interview.id} className={`flex items-center ${densitySpaces[density]} px-3 rounded-md shadow-light-xl bg-white text-slate-700 transition-all`}>
             <div className="w-36 flex items-center">
                 <StatusPill status={interview.status} className={density === "Compact" ? "py-0 px-2" : undefined}/>
             </div>
@@ -33,7 +33,7 @@ export const InterviewLine = ({ interview }: InterviewLineProps) => {
 
             <InterviewField label="Role" value={interview.job.role} className="flex-1 w-24" />
             <InterviewField label="City" value={interview.job.city} className="w-44" />
-            <InterviewField label="Stack" value={interview.job.stack} className="w-44" />
+            <InterviewField label="Stack" value={interview.job.stack} className="flex-1 w-44" />
             <InterviewField label="Salary" value={interview.job.salary} className="w-24" />
             <button onClick={() => deleteInterview(interview.id)} className="float-right w-12 px-2 text-sm text-slate-600">
                 <FontAwesomeIcon icon={faTrash} />

@@ -15,7 +15,7 @@ export const InterviewsListHeader = () => (
         <div className="inline-block w-44">
             <FontAwesomeIcon icon={faCity} />
         </div>
-        <div className="inline-block w-44">
+        <div className="flex-1 inline-block w-44">
             <FontAwesomeIcon icon={faCode} />
         </div>
         <div className="inline-block w-24">
