@@ -1,17 +1,20 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 
 type InterviewFieldProps = {
     label: string;
     value: string | null;
-    icon?: IconDefinition;
+    onChange?: (value: string) => void;
     className?: React.HTMLAttributes<HTMLDivElement>["className"];
 };
 
-export const InterviewField = ({ label, value, icon, className }: InterviewFieldProps) => (
-    <div className={`inline-block ${className}`}>
-        {icon && <FontAwesomeIcon icon={icon} className="mr-2" />}
-        {value ? <span>{value}</span> : <span className="text-slate-300">{label}</span>}
+export const InterviewField = ({ label, value, onChange, className }: InterviewFieldProps) => (
+    <div className={`inline-block ${className} pr-2`}>
+        <input
+            type="text"
+            placeholder={label}
+            value={value || ""}
+            onChange={(event) => (onChange ? onChange(event.target.value) : undefined)}
+            className="focus:outline-none w-full"
+        />
     </div>
 );

@@ -7,7 +7,7 @@ export const InterviewsListHeader = () => (
         <div className="inline-block w-36 font-medium uppercase">Status</div>
 
         <div className="flex-1 inline-block w-72 font-medium uppercase">Company</div>
-        <div className="inline-block w-24">
+        <div className="inline-block w-28">
             <FontAwesomeIcon icon={faUsers} />
         </div>
 
@@ -18,7 +18,7 @@ export const InterviewsListHeader = () => (
         <div className="flex-1 inline-block w-44">
             <FontAwesomeIcon icon={faCode} />
         </div>
-        <div className="inline-block w-24">
+        <div className="inline-block w-28">
             <FontAwesomeIcon icon={faEuro} />
         </div>
         <div className="inline-block w-12"></div>
