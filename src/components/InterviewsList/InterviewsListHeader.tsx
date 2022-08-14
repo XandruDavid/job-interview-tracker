@@ -4,7 +4,7 @@ import { faCity, faCode, faEuro, faUsers } from "@fortawesome/free-solid-svg-ico
 
 export const InterviewsListHeader = () => (
     <div className="my-1 px-3 py-1 text-sm text-slate-300">
-        <div className="inline-block w-28 font-medium uppercase">Status</div>
+        <div className="inline-block w-36 font-medium uppercase">Status</div>
 
         <div className="inline-block w-72 font-medium uppercase">Company</div>
         <div className="inline-block w-24">
