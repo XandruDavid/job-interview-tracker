@@ -5,6 +5,7 @@ import { Interview } from "../../models/Interview";
 import { InterviewField } from "./InterviewsListField";
 import { StatusPill } from "../StatusPill";
 import { useWorkspaceStore } from "../../store/useWorkspaceStore";
+import { usePreferencesStore } from "../../store/usePreferencesStore";
 
 type InterviewLineProps = {
     interview: Interview;
@@ -12,7 +13,7 @@ type InterviewLineProps = {
 
 export const InterviewLine = ({ interview }: InterviewLineProps) => {
     const deleteInterview = useWorkspaceStore((state) => state.deleteInterview);
-    const density = "Compact";
+    const density = usePreferencesStore((state) => state.prefernces.density);
 
     return (
         <div key={interview.id} className={`${density === "Compact" ? "my-0.5 p-2" : "my-1 p-3"} rounded-md shadow-light-xl bg-white text-slate-700`}>

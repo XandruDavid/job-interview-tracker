@@ -4,7 +4,6 @@ import { persist } from "zustand/middleware";
 import { Company } from "../models/Company";
 import { Interview } from "../models/Interview";
 import { Job } from "../models/Job";
-
 import { Workspace } from "../models/Workspace";
 
 const LOCAL_STOREAGE_KEY = "database";
