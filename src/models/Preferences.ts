@@ -2,4 +2,4 @@ export type Preferences = {
     density: Density;
 };
 
-export type Density = "Compact" | "Comfortable";
+export type Density = "Compact" | "Normal" | "Comfortable";
