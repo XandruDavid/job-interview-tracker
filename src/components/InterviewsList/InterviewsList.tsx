@@ -14,7 +14,7 @@ export const InterviewsList = () => {
             {interviews.map((interview) => (
                 <InterviewLine key={interview.id} interview={interview} />
             ))}
-            <button onClick={createNewInterview}>Add</button>
+            <button onClick={createNewInterview} className="py-2 text-sm text-slate-700" >+ Add Interview</button>
         </div>
     );
 };
