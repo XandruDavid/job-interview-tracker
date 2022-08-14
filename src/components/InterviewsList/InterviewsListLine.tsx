@@ -28,7 +28,12 @@ export const InterviewLine = ({ interview }: InterviewLineProps) => {
     return (
         <div key={interview.id} className={`flex items-center ${densitySpaces[density]} px-3 rounded-md shadow-light-xl bg-white text-slate-700 transition-all`}>
             <div className="w-36 flex items-center">
-                <StatusPill status={interview.status} className={density === "Compact" ? "py-0 px-2" : undefined} />
+                <StatusPill
+                    status={interview.status}
+                    editable
+                    setStatus={(status) => updateInterview({ ...interview, status: status })}
+                    className={density === "Compact" ? "py-0 px-2" : undefined}
+                />
             </div>
 
             <InterviewField

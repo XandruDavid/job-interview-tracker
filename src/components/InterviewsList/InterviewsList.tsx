@@ -10,7 +10,10 @@ export const InterviewsList = () => {
 
     return (
         <div className="p-14">
-            <h1 className="mb-12 text-3xl text-slate-900 font-extrabold">{workspaceName}<DensityToggle className="float-right" /></h1>
+            <h1 className="mb-12 text-3xl text-slate-900 font-extrabold">
+                {workspaceName}
+                <DensityToggle className="float-right" />
+            </h1>
             <InterviewsListHeader />
             {interviews.map((interview) => (
                 <InterviewLine key={interview.id} interview={interview} />
