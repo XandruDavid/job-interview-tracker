@@ -1,5 +1,5 @@
 import React from "react";
-import { useWorkspaceStore } from "../../store/store";
+import { useWorkspaceStore } from "../../store/useWorkspaceStore";
 import { InterviewsListHeader } from "./InterviewsListHeader";
 import { InterviewLine } from "./InterviewsListLine";
 
@@ -14,7 +14,9 @@ export const InterviewsList = () => {
             {interviews.map((interview) => (
                 <InterviewLine key={interview.id} interview={interview} />
             ))}
-            <button onClick={createNewInterview} className="py-2 text-sm text-slate-700" >+ Add Interview</button>
+            <button onClick={createNewInterview} className="py-2 text-sm text-slate-700">
+                + Add Interview
+            </button>
         </div>
     );
 };

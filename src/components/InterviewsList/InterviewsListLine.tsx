@@ -1,11 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-
 import { Interview } from "../../models/Interview";
-import { useWorkspaceStore } from "../../store/store";
 import { InterviewField } from "./InterviewsListField";
 import { StatusPill } from "../StatusPill";
+import { useWorkspaceStore } from "../../store/useWorkspaceStore";
 
 type InterviewLineProps = {
     interview: Interview;
