@@ -46,12 +46,13 @@ export const StatusPill = ({ status, editable, setStatus, className }: StatusPil
             {editable && (
                 <div
                     ref={ref}
-                    className={`${dropdownVisible ? "" : "hidden"} absolute z-10 top-0 left-full ml-4 min-w-max rounded-md p-4 flex flex-col items-start gap-2 bg-white shadow-lg`}
+                    className={`${dropdownVisible ? "" : "hidden"} absolute z-10 top-0 left-full ml-4 py-2 min-w-max rounded-md flex flex-col items-start overflow-hidden bg-white shadow-centered-lg`}
                 >
                     {statusOptions
                         .map((s) => (
                             <button
                                 key={s}
+                                className="px-4 py-1 w-full hover:bg-slate-100 text-left"
                                 onClick={() => {
                                     setStatus && setStatus(s);
                                     setDropdownVisible(false);

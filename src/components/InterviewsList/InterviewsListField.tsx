@@ -14,7 +14,7 @@ export const InterviewField = ({ label, value, onChange, className }: InterviewF
             placeholder={label}
             value={value || ""}
             onChange={(event) => (onChange ? onChange(event.target.value) : undefined)}
-            className="focus:outline-none w-full"
+            className="focus:outline-none w-full overflow-ellipsis"
         />
     </div>
 );

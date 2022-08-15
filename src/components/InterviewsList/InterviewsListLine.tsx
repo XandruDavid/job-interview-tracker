@@ -62,16 +62,16 @@ export const InterviewLine = ({ interview }: InterviewLineProps) => {
                 className="flex-1"
             />
             <InterviewField
-                label="City"
-                value={interview.job.city}
-                onChange={(value) => updateInterview({ ...interview, job: { ...interview.job, city: value } })}
-                className="w-44"
-            />
-            <InterviewField
                 label="Stack"
                 value={interview.job.stack}
                 onChange={(value) => updateInterview({ ...interview, job: { ...interview.job, stack: value } })}
                 className="flex-1"
+            />
+            <InterviewField
+                label="City"
+                value={interview.job.city}
+                onChange={(value) => updateInterview({ ...interview, job: { ...interview.job, city: value } })}
+                className="w-44"
             />
             <InterviewField
                 label="Salary"
